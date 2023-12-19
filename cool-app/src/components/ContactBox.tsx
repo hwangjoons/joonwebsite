@@ -1,8 +1,10 @@
 import React from 'react'
 
-const ContactBox = () => {
+const ContactBox: React.FC = () => {
+    const contactBoxRef = React.useRef<HTMLDivElement>(null);
+
     return (
-        <div className='text-box'>
+        <div ref ={contactBoxRef} className='text-box'>
             <h3>Contact</h3>
             <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
@@ -15,4 +17,4 @@ const ContactBox = () => {
     )
 }
 
-export default ContactBox
+export default ContactBox;

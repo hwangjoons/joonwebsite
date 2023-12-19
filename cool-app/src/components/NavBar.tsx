@@ -4,6 +4,11 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/system';
+import { Link } from 'react-scroll';
+
+interface NavBarProps {
+    onContactClick: () => void;
+}
 
 const StyledTypography = styled(Typography)({
     flexGrow: 1,
@@ -31,14 +36,18 @@ const CenteredToolbar = styled(Toolbar)({
 
 });
 
-const NavBar: React.FC = () => {
+const NavBar: React.FC = ({ onContactClick }) => {
     return (
         <div>
             <TransparentAppBar position="static">
                 <CenteredToolbar>
                     <StyledButton color="inherit">About</StyledButton>
                     <StyledButton color="inherit">Portfolio</StyledButton>
-                    <StyledButton color="inherit">Contact</StyledButton>
+                    <StyledButton color="inherit">
+                        <Link to="contact" smooth={true} duration={500}>
+                            Contact
+                        </Link>
+                    </StyledButton>
                 </CenteredToolbar>
             </TransparentAppBar>
         </div>

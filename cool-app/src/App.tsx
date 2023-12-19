@@ -13,13 +13,20 @@ import Game from "./components/game/Game";
 
 import React from 'react';
 import NavBar from './components/NavBar';
+import { Element } from 'react-scroll';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App: React.FC = () => {
+  const contactBoxRef = React.useRef<HTMLDivElement>(null);
+
+  const scrollToContactBox = () => {
+    if (contactBoxRef.current) {
+      contactBoxRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <div>
-      <NavBar />
+      <NavBar onContactClick={scrollToContactBox} />
       <div>
         <ImageOne />
         <TextBox />
@@ -30,10 +37,13 @@ function App() {
           <Game />
         </div>
         <ImageThree />
-        <ContactBox />
+        <Element name="contact">
+          <ContactBox />
+        </Element>
+        {/* <ContactBox ref={contactBoxRef} /> */}
       </div>
     </div>
   )
 }
 
-export default App
+export default App;
