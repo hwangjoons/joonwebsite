@@ -7,13 +7,19 @@ import ImageTwo from './components/ImageTwo'
 import ImageThree from './components/ImageThree'
 import TextBox from './components/TextBox'
 import ParagraphBox from './components/ParagraphBox'
+import ContactBox from './components/ContactBox'
 
 import Game from "./components/game/Game";
+
+import React from 'react';
+import NavBar from './components/NavBar';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
+    <div>
+      <NavBar />
       <div>
         <ImageOne />
         <TextBox />
@@ -24,7 +30,9 @@ function App() {
           <Game />
         </div>
         <ImageThree />
+        <ContactBox />
       </div>
+    </div>
   )
 }
 
