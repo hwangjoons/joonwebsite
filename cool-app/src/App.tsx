@@ -29,7 +29,9 @@ const App: React.FC = () => {
       <NavBar onContactClick={scrollToContactBox} />
       <div>
         <ImageOne />
-        <TextBox />
+        <Element name="personal_statement">
+          <TextBox />
+        </Element>
         <ImageTwo />
         <ParagraphBox />
         <div>

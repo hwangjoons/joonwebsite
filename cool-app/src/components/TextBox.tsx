@@ -3,16 +3,14 @@ import React from 'react'
 const TextBox = () => {
     return (
         <div className='text-box'>
-            <h3>Introduction</h3>
-            <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                It has survived not only five centuries, but also the leap into electronic typesetting, 
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset 
-                sheets containing Lorem Ipsum passages, and more recently with desktop publishing software 
-                like Aldus PageMaker including versions of Lorem Ipsum.</div>
+            <h3>Hi! I am Joon</h3>
+            <div>I am a full stack developer and programmer currently working in the higher-ed space. I created java programs to automate ETL processes involving third party software, working with both Oracle SQL and T-SQL queries.</div>
+            <div>Before becoming a software engineer, I graduated from the University of Maryland, College Park and worked in the accounting consulting area for about 3 years. </div>
+            <div>My experiences working closely with data scientists and other technical developers during my time as a consultant opened my eyes to the world of coding and software developing. </div>
+            <div>When I am not in front of a computer, you can find me in front of a desk, reading about philosophies and history of different cultures. Or socializing with friends, somewhere around or within nature </div>
+
         </div>
     )
 }
 
-export default TextBox
+export default TextBox;

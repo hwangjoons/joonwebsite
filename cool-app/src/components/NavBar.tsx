@@ -6,6 +6,8 @@ import Button from '@mui/material/Button';
 import { styled } from '@mui/system';
 import { Link } from 'react-scroll';
 
+import { StyledAppBar, CenteredToolbar, StyledButton } from '../styles';
+
 interface NavBarProps {
     onContactClick: () => void;
 }
@@ -15,41 +17,27 @@ const StyledTypography = styled(Typography)({
     color: 'black',
 });
 
-const StyledButton = styled(Button)({
-    color: 'black',
-    margin: '0 8 px',
-});
-
-const TransparentAppBar = styled(AppBar)({
-    backdropFilter: 'blur(10px)',
-    backgroundColor: 'rgba(255, 255, 255, 0.2)',
-    boxShadow: 'none',
-    display: 'flex',
-    justifyContent: 'center',
-});
-
-const CenteredToolbar = styled(Toolbar)({
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'center',
-    gap: '50px',
-
-});
 
 const NavBar: React.FC = ({ onContactClick }) => {
     return (
         <div>
-            <TransparentAppBar position="static">
+            <StyledAppBar position="static">
                 <CenteredToolbar>
-                    <StyledButton color="inherit">About</StyledButton>
-                    <StyledButton color="inherit">Portfolio</StyledButton>
                     <StyledButton color="inherit">
-                        <Link to="contact" smooth={true} duration={500}>
+                        <Link to="personal_statement" smooth={false}>
+                            About
+                        </Link>    
+                    </StyledButton>
+                    <StyledButton color="inherit">
+                        Portfolio
+                    </StyledButton>
+                    <StyledButton color="inherit">
+                        <Link to="contact" smooth={false}>
                             Contact
                         </Link>
                     </StyledButton>
                 </CenteredToolbar>
-            </TransparentAppBar>
+            </StyledAppBar>
         </div>
     );
 };
