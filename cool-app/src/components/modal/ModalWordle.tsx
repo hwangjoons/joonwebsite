@@ -1,6 +1,6 @@
 import React, { ReactNode, FunctionComponent } from 'react';
 import ReactModal from 'react-modal';
-// import Game from "../game/tictactoe/Game";
+import Wordle from "../game/wordle/Wordle";
 
 import './ModalWordle.css';
 
@@ -19,7 +19,7 @@ const Modal: FunctionComponent<ModalProps> = ({ isOpen, onRequestClose }) => {
       className="modal"
       overlayClassName="modal-overlay"
     >
-      {/* <Game /> */}
+      <Wordle />
     </ReactModal>
   );
 };
