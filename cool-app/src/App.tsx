@@ -11,7 +11,10 @@ import ContactBox from './components/ContactBox';
 
 import Game from "./components/game/Game";
 
-import Modal from './Modal';
+import ModalTTT from './components/modal/ModalTTT';
+import ModalWordle from './components/modal/ModalWordle';
+import ModalGame3 from './components/modal/ModalGame3';
+
 import NavBar from './components/NavBar';
 import { Element } from 'react-scroll';
 
@@ -19,15 +22,34 @@ import { Element } from 'react-scroll';
 const App: React.FC = () => {
   const contactBoxRef = React.useRef<HTMLDivElement>(null);
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalTTTOpen, setIsModalTTTOpen] = useState(false);
+  const [isModalWordleOpen, setIsModalWordleOpen] = useState(false);
+  const [isModalGame3Open, setIsModalGame3Open] = useState(false);
 
-  const openModal = () => {
-    setIsModalOpen(true);
+  const openModalTTT = () => {
+    setIsModalTTTOpen(true);
   }
 
-  const closeModal = () => {
-    setIsModalOpen(false);
+  const closeModalTTT = () => {
+    setIsModalTTTOpen(false);
   }
+
+  const openModalWordle = () => {
+    setIsModalWordleOpen(true);
+  }
+
+  const closeModalWordle = () => {
+    setIsModalWordleOpen(false);
+  }
+
+  const openModalGame3 = () => {
+    setIsModalGame3Open(true);
+  }
+
+  const closeModalGame3 = () => {
+    setIsModalGame3Open(false);
+  }
+
 
 
   const scrollToContactBox = () => {
@@ -46,9 +68,13 @@ const App: React.FC = () => {
         </Element>
         <ImageTwo />
         <ParagraphBox />
-        <div>
-          <button onClick={openModal}>Open Modal</button>
-          <Modal isOpen={isModalOpen} onRequestClose={closeModal}></Modal>
+        <div className="button-container">
+          <button className="game-button" onClick={openModalTTT}>Tic Tac Toe</button>
+          <ModalTTT isOpen={isModalTTTOpen} onRequestClose={closeModalTTT}></ModalTTT>
+          <button className="game-button" onClick={openModalWordle}>Wordle</button>
+          <ModalWordle isOpen={isModalWordleOpen} onRequestClose={closeModalWordle}></ModalWordle>
+          <button className="game-button" onClick={openModalGame3}>Game 3</button>
+          <ModalGame3 isOpen={isModalGame3Open} onRequestClose={closeModalGame3}></ModalGame3>
           {/* <h1>TIC TAC TOE</h1> */}
           {/* <Game /> */}
           <br /> {/* Line break */}

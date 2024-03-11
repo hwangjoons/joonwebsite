@@ -44,3 +44,15 @@
 .DivAboveImageThree {
   margin-bottom: 5em;
 }
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.game-button {
+  padding: 10px 15px;
+  margin: 30px;
+}

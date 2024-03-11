@@ -1,8 +1,8 @@
 import React, { ReactNode, FunctionComponent } from 'react';
 import ReactModal from 'react-modal';
-import Game from "./components/game/Game";
+// import Game from "../game/tictactoe/Game";
 
-import './Modal.css';
+import './ModalGame3.css';
 
 interface ModalProps {
   isOpen: boolean;
@@ -19,7 +19,7 @@ const Modal: FunctionComponent<ModalProps> = ({ isOpen, onRequestClose }) => {
       className="modal"
       overlayClassName="modal-overlay"
     >
-      <Game />
+      {/* <Game /> */}
     </ReactModal>
   );
 };
