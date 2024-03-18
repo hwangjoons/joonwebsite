@@ -1,0 +1,119 @@
+.board {
+  margin-top: 25px;
+  display: flex;
+  width: 100%;
+  height: 150px;
+  /* background-color: #f0f0f0;
+  border: 5px solid #000;
+  border-radius: 10px; */
+  white-space: nowrap;
+}
+
+.cell {
+  position: relative;
+  min-width: 100px;
+  height: 100%;
+  background-color: #fff;
+  border: 2px solid #000;
+  margin: 0 5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.cell.hovered {
+  transform: scale(1.2); /* Scale up the cell when hovered */
+}
+
+.tooltip {
+  position: absolute;
+  top: -60px; /* Adjust the tooltip position */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+  display: none; /* Initially hide the tooltip */
+}
+
+.cell.hovered .tooltip {
+  display: block; /* Show the tooltip when cell is hovered */
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.cell.hovered .modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  position: absolute;
+  top: calc(50% - 20px); /* Adjust positioning as needed */
+  left: calc(50% - 20px); /* Adjust positioning as needed */
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 40px 40px 0;
+  border-color: #ffffff transparent transparent;
+  background-color: #ffffff;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+.cell.hovered .modal {
+  width: 200px; /* Adjust width as needed */
+  height: 120px; /* Adjust height as needed */
+  opacity: 1;
+  visibility: visible;
+  background-color: aqua;
+}
+
+.modal-content {
+  padding: 10px;
+}
+
+@keyframes bubble {
+  0% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.cell.hovered .modal {
+  animation: bubble 0.5s ease;
+}

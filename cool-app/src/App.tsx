@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
-import './App.css';
+import './css/App.css';
 import ImageOne from './components/ImageOne';
 import ImageTwo from './components/ImageTwo';
 import ImageThree from './components/ImageThree';
 import TextBox from './components/TextBox';
-import ParagraphBox from './components/ParagraphBox';
+import ExperienceText from './components/ExperienceText';
 import ContactBox from './components/ContactBox';
 
 import Game from "./components/game/Game";
@@ -67,7 +67,7 @@ const App: React.FC = () => {
           <TextBox />
         </Element>
         <ImageTwo />
-        <ParagraphBox />
+        <ExperienceText />
         <div className="button-container">
           <button className="game-button" onClick={openModalTTT}>Tic Tac Toe</button>
           <ModalTTT isOpen={isModalTTTOpen} onRequestClose={closeModalTTT}></ModalTTT>
