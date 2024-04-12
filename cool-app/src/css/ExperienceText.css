@@ -117,3 +117,35 @@
 .cell.hovered .modal {
   animation: bubble 0.5s ease;
 }
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  max-width: 400px;
+  position: relative;
+}
+
+.timeline-date {
+  font-weight: bold;
+  color: #333;
+}
+
+.timeline-event {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #007bff;
+}
+
+.timeline-description {
+  margin-top: 10px;
+  color: #666;
+}
