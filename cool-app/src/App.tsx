@@ -68,17 +68,19 @@ const App: React.FC = () => {
         </Element>
         <ImageTwo />
         <ExperienceText />
-        <div className="button-container">
+
+        {/* <div className="button-container">
           <button className="game-button" onClick={openModalTTT}>Tic Tac Toe</button>
           <ModalTTT isOpen={isModalTTTOpen} onRequestClose={closeModalTTT}></ModalTTT>
           <button className="game-button" onClick={openModalWordle}>Wordle</button>
           <ModalWordle isOpen={isModalWordleOpen} onRequestClose={closeModalWordle}></ModalWordle>
           <button className="game-button" onClick={openModalGame3}>Game 3</button>
           <ModalGame3 isOpen={isModalGame3Open} onRequestClose={closeModalGame3}></ModalGame3>
-          {/* <h1>TIC TAC TOE</h1> */}
-          {/* <Game /> */}
-          <br /> {/* Line break */}
-        </div>
+          <h1>TIC TAC TOE</h1>
+          <Game />
+          <br /> Line break
+        </div> */}
+
         <div className="DivAboveImageThree"></div>
         <ImageThree />
         <Element name="contact">

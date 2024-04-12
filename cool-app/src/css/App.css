@@ -56,13 +56,3 @@
   padding: 10px 15px;
   margin: 30px;
 }
-
-.custom-curosr {
-  width: 20px;
-  height: 20px;
-  border: 2px solid #000;
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none; /* Ensures the cursor doesn't interfere with pointer events on other elements */
-  z-index: 9999; /* Ensure the cursor stays on top of other elements */
-}
