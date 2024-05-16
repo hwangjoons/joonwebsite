@@ -7,6 +7,10 @@ import ImageTwo from './components/ImageTwo';
 import ImageThree from './components/ImageThree';
 import TextBox from './components/TextBox';
 import ExperienceText from './components/ExperienceText';
+import MovableComponent from './components/MovableComponent';
+import ComponentGallery from './components/ComponentGallery';
+import SliderComponent from './components/SliderComponent';
+
 import ContactBox from './components/ContactBox';
 
 import Game from "./components/game/Game";
@@ -67,8 +71,12 @@ const App: React.FC = () => {
           <TextBox />
         </Element>
         <ImageTwo />
-        <ExperienceText />
-
+        {/* <ExperienceText /> */}
+        <div className="ExperienceBox">
+          {/* <MovableComponent /> */}
+          {/* <ComponentGallery /> */}
+          <SliderComponent />
+        </div>
         {/* <div className="button-container">
           <button className="game-button" onClick={openModalTTT}>Tic Tac Toe</button>
           <ModalTTT isOpen={isModalTTTOpen} onRequestClose={closeModalTTT}></ModalTTT>
