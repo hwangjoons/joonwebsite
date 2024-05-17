@@ -10,6 +10,7 @@ import ExperienceText from './components/ExperienceText';
 import MovableComponent from './components/MovableComponent';
 import ComponentGallery from './components/ComponentGallery';
 import SliderComponent from './components/SliderComponent';
+import MultiCarousel from './components/MultiCarousel';
 
 import ContactBox from './components/ContactBox';
 
@@ -22,8 +23,18 @@ import ModalGame3 from './components/modal/ModalGame3';
 import NavBar from './components/NavBar';
 import { Element } from 'react-scroll';
 
+import { items } from './data/data';
 
 const App: React.FC = () => {
+
+  // const items = [
+  //   <div className="item">Item 1</div>,
+  //   <div className="item">Item 2</div>,
+  //   <div className="item">Item 3</div>,
+  //   <div className="item">Item 4</div>,
+  //   <div className="item">Item 5</div>,
+  // ];
+
   const contactBoxRef = React.useRef<HTMLDivElement>(null);
 
   const [isModalTTTOpen, setIsModalTTTOpen] = useState(false);
@@ -72,11 +83,13 @@ const App: React.FC = () => {
         </Element>
         <ImageTwo />
         {/* <ExperienceText /> */}
-        <div className="ExperienceBox">
+        {/* <div className="ExperienceBox"> */}
           {/* <MovableComponent /> */}
           {/* <ComponentGallery /> */}
-          <SliderComponent />
-        </div>
+          {/* <SliderComponent /> */}
+          <MultiCarousel items={items} visibleCount={3} />
+
+        {/* </div> */}
         {/* <div className="button-container">
           <button className="game-button" onClick={openModalTTT}>Tic Tac Toe</button>
           <ModalTTT isOpen={isModalTTTOpen} onRequestClose={closeModalTTT}></ModalTTT>

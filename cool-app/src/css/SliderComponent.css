@@ -1,11 +1,29 @@
-.slider {
+/* .slider {
   display: flex;
-  /* justify-content: space-between; */
-  width: auto; /* Adjusted to allow for content width */
+  justify-content: space-between;
+  width: auto;
   height: 200px;
   padding: 10px;
   box-sizing: border-box;
-  cursor: grab; /* Show grab cursor */
+  cursor: grab;
+} */
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  position: relative;
+  /* perspective: 1000px; */
+}
+
+.slider-container {
+  position: absolute;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card {
+  transform-origin: bottom center;
 }
 
 .poster {
