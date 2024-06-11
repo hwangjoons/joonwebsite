@@ -1,0 +1,45 @@
+.carousal-container {
+    /* display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    width: 100%;
+    background-color: #00008B;
+    color: #fff;
+    margin: 0 15px;
+    font-size: 4em; */
+    margin-top: 25px;
+}
+
+.carousal-individual {
+    padding: 10px; 
+    /* border: 1px solid #402ea7;  */
+    border: 1px solid rgba(10, 10, 10, 10);
+    border-radius: 4px;
+    min-height: 300px;
+    min-width: 300px;
+    max-height: 1000px;
+    max-width: 100px;
+    transform: rotate(15deg);
+}
+
+.item-title {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.center {
+
+}
+
+.tilted-left {
+    background-color: lightblue;
+    transform: rotate(345deg)
+}
+
+.tilted-right {
+    transform: rotate(15deg);
+}
+
+.item-desc {
+
+}

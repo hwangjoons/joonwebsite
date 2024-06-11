@@ -11,6 +11,11 @@ import MovableComponent from './components/MovableComponent';
 import ComponentGallery from './components/ComponentGallery';
 import SliderComponent from './components/SliderComponent';
 import MultiCarousel from './components/MultiCarousel';
+import Carousel from './components/Carousel';
+
+// import OwlCarousel from 'react-owl-carousel';
+// import 'owl.carousel/dist/assets/owl.carousel.css';
+// import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 import ContactBox from './components/ContactBox';
 
@@ -87,7 +92,8 @@ const App: React.FC = () => {
           {/* <MovableComponent /> */}
           {/* <ComponentGallery /> */}
           {/* <SliderComponent /> */}
-          <MultiCarousel items={items} visibleCount={3} />
+          {/*<MultiCarousel items={items} visibleCount={3} />*/}
+          <Carousel items={items}/>
 
         {/* </div> */}
         {/* <div className="button-container">
