@@ -25,7 +25,7 @@ interface CarouselProps {
 }
   
 const Carousel: React.FC<CarouselProps> = ({ items }) => {
-    const [centerIndex, setCenterIndex] = useState(0);
+    const [centerIndex, setCenterIndex] = useState(1);
 
     const tiltClass = (index) => {
         if (index === centerIndex) return 'center';
