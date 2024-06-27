@@ -12,6 +12,7 @@ import ComponentGallery from './components/ComponentGallery';
 import SliderComponent from './components/SliderComponent';
 import MultiCarousel from './components/MultiCarousel';
 import Carousel from './components/Carousel';
+import Carousel2 from './components/Carousel2';
 
 // import OwlCarousel from 'react-owl-carousel';
 // import 'owl.carousel/dist/assets/owl.carousel.css';
@@ -93,8 +94,8 @@ const App: React.FC = () => {
           {/* <ComponentGallery /> */}
           {/* <SliderComponent /> */}
           {/*<MultiCarousel items={items} visibleCount={3} />*/}
-          <Carousel items={items}/>
-
+          {/* <Carousel items={items}/> */}
+          <Carousel2 items={items} />
         {/* </div> */}
         {/* <div className="button-container">
           <button className="game-button" onClick={openModalTTT}>Tic Tac Toe</button>
