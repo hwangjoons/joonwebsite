@@ -95,7 +95,12 @@ const App: React.FC = () => {
           {/* <SliderComponent /> */}
           {/*<MultiCarousel items={items} visibleCount={3} />*/}
           {/* <Carousel items={items}/> */}
+        <div 
+          style={{
+            maxWidth: "500px", maxHeight: "500px", margin: "0 auto"
+          }}>
           <Carousel2 items={items} />
+        </div>
         {/* </div> */}
         {/* <div className="button-container">
           <button className="game-button" onClick={openModalTTT}>Tic Tac Toe</button>
